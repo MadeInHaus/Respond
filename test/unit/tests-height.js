@@ -61,7 +61,7 @@ window.onload = function() {
 		});
 
 		asyncTest( 'styles within min-height media queries apply properly', function() { 
-			window.resizeTo(300, 400);
+			window.resizeTo(500, 400);
 			setTimeout(function() {
 				strictEqual(getHeight(), 220, 'testelem is 220px tall when window is >= 300px tall');
 				start();
@@ -71,7 +71,7 @@ window.onload = function() {
 		asyncTest( 'styles within min-width AND min-height media queries apply properly', function() { 
 			window.resizeTo(800, 800);
 			setTimeout(function() {
-				strictEqual(getHeight(), 270, 'testelem is 270px tall when window is >= 500px wide and >= 400px tall');
+				strictEqual(getHeight(), 270, 'testelem is 270px tall when window is >= 500px wide and >= 500px tall');
 				start();
 			}, 900);
 		});
