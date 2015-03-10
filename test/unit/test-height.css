@@ -1,0 +1,37 @@
+/* Tests for min-height and max-height */
+
+.launcher #qunit-testrunner-toolbar,
+.launcher #qunit-userAgent,
+.launcher #qunit-tests,
+.launcher #qunit-testresult {
+	display: none;
+}
+.launcher #launcher {
+	font: 1.5em/1 bold Helvetica, sans-serif;
+}
+
+#testelem {
+	width: 50px;
+	overflow: hidden;
+	display: block;
+}
+
+/* styles for 400px and under */
+@media (max-height: 400px) {
+	#testelem {
+		height: 75px;
+	}
+}
+
+/* styles for 300px and above */
+@media (min-height: 300px) {
+	#testelem {
+		height: 220px;
+	}
+}
+
+@media (min-width: 500px) and (min-height: 500px) {
+	#testelem {
+		height: 270px;
+	}
+}
